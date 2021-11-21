@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import axios from "axios"
 import { makeStyles } from '@material-ui/core/styles';
-import {useLocation} from "react";
+import {useLocation} from "react-router-dom";
 //import { Title } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -36,7 +36,7 @@ export default function Download(){
     //effect
     useEffect(()=>{
         setUrl(query.get("url"))
-    },[query.get("url")])
+    },[])
     return(
         <div className={classes.downloadPage}>
             <div className={classes.VideoPlayer}>
